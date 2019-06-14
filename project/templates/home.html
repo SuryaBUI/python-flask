@@ -1,0 +1,33 @@
+<head>
+  	<link rel="stylesheet"  href="{{ url_for('static', filename='css/main_register.css') }}">
+</head>
+<body>
+
+{%  extends "base_hr.html" %}
+
+{% block content %}
+<div class="main-w3layouts wrapper">
+  <div class="main-agileinfo">
+    <div class="agileits-top">
+{% if current_user.is_authenticated %}
+<p>Welcome {{current_user.username}}</p>
+<p>This application is used as library management system. Here we can add new employee and assign them a HR_SPOC. And if an employee wants to issue a book, app can assign the book to the employee</p>
+{% else %}
+
+        <div class="text-center">
+          <strong>Hey User,  <a href="{{url_for('login')}}" class="txt2 hov1">Please Login</a> </strong><br>
+						<span class="txt1">
+							Create an account?
+						</span>
+
+						<a href="{{url_for('register')}}" class="txt2 hov1">
+							Sign up
+						</a>
+				</div>
+
+{% endif%}
+</div>
+</div>
+</div>
+{% endblock %}
+</body>

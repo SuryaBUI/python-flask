@@ -1,0 +1,23 @@
+<head>
+  	<link rel="stylesheet"  href="{{ url_for('static', filename='css/main_register.css') }}">
+</head>
+<body>
+
+
+{% extends "base_hr.html"%}
+{%block content%}
+<div class="main-w3layouts wrapper">
+  <h1>Add New HR</h1>
+  <div class="main-agileinfo">
+    <div class="agileits-top">
+      <form method="post">
+      {{form.hidden_tag()}}
+      {{form.name.label}}{{form.name()}}
+      {{form.emplo_id.label}}{{form.emplo_id()}}
+      {{form.submit()}}
+    </form>
+</div>
+</div>
+</div>
+{% endblock%}
+</body>

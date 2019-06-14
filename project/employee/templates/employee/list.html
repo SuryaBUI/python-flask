@@ -1,0 +1,28 @@
+<head>
+  	<link rel="stylesheet"  href="{{ url_for('static', filename='css/main_register.css') }}">
+</head>
+<body>
+
+
+{% extends 'base_hr.html' %}
+{% block content %}
+<div class="main-w3layouts wrapper">
+  <div class="main-agileinfo">
+    <div class="agileits-top">
+
+  {% for emp in employees %}
+  <ol>
+    <li><h5>=></h5>{{emp}}</li>
+    </ol>
+  {% endfor %}
+
+<!-- <ul>
+  {% for bbok in book %}
+    <li>{{bbok}}</li>
+  {% endfor %}
+</ul> -->
+</div>
+</div>
+</div>
+{% endblock%}
+</body>
